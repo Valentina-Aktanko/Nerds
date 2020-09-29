@@ -8,3 +8,7 @@
 @import "vendor";
 @import "base";
 @import "helpers";
+
+.page-header {
+	background-color: $color-lightgrey;
+}
