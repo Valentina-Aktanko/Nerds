@@ -15,8 +15,14 @@
 			<ul class="site-nav__list">
 				<li>
 					<a href="blank.html">Студия</a>
+				</li>
+				<li>
 					<a href="blank.html">Клиенты</a>
+				</li>
+				<li>
 					<a href="catalog.html">Магазин</a>
+				</li>
+				<li>
 					<a href="blank.html">Контакты</a>
 				</li>
 			</ul>
@@ -52,9 +58,9 @@
 				</li>
 			</ul>
 			<ul class="slider__controlls">
-				<li><button class="slider__controll slider__controll--active">Слайд 1</button></li>
-				<li><button class="slider__controll">Слайд 2</button></li>
-				<li><button class="slider__controll">Слайд 3</button></li>
+				<li><button class="slider__controll slider__controll--active" type="button">Слайд 1</button></li>
+				<li><button class="slider__controll" type="button">Слайд 2</button></li>
+				<li><button class="slider__controll" type="button">Слайд 3</button></li>
 			</ul>
 		</section>
 
@@ -179,5 +185,25 @@
 		</div>
 
 	</footer>
+
+	<section class="popup feedback">
+		<h2 class="feedback__title">Напишите нам</h2>
+		<form class="feedback__form" action="https://echo.htmlacademy.ry">
+			<p class="feedback__item">
+				<label class="feedback__label" for="feedback-form-name">Ваше имя:</label>
+				<input class="feedback__input" id="feedback-form-name" type="text" name="name" placeholder="Имя Фамилия">
+			</p>
+			<p class="feedback__item">
+				<label class="feedback__label" for="feedback-form-email">Ваш e-mail:</label>
+				<input class="feedback__input" id="feedback-form-email" type="email" name="email" placeholder="email@example.com">
+			</p>
+			<p class="feedback__item">
+				<label class="feedback__label" for="feedback-form-message">Текст письма:</label>
+				<textarea class="feedback__input" id="feedback-form-message" type="text" name="email" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+			</p>
+			<button class="button feedback__button" type="submit">Отправить</button>
+			<button type="feedback__close"><span class="visually-hidden">Закрыть окно</span></button>
+		</form>
+	</section>
 </body>
 </html>
