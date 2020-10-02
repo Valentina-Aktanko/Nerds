@@ -1,5 +1,5 @@
-mixin link(url, name, isCurrent)
-	if isCurrent
+mixin link(url, name)
+	if url === currentPage
 		a= name
 	else
 		a(href=url)= name
