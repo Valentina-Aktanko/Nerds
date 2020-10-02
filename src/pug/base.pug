@@ -307,10 +307,10 @@ html(class=html.classList)&attributes(html.attrs)
 				nav.site-nav.page-header__site-nav
 					ul.site-nav__list
 						each item in siteNav
-							+navItem(item.url, item.name, item.url === currentPage)
+							+navItem(item.url, item.name)
 				ul.user-nav
 					li
-						a(href="blank.html") Корзина
+						+link("blank.html", "Корзина")
 		block content
 		block page-footer
 			|Тут будет подвал
