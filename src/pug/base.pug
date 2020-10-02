@@ -282,7 +282,29 @@ html(class=html.classList)&attributes(html.attrs)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
 		block body-start
+		block page-header
+			header.page-header
+				+logo(currentPage)
+				nav.site-nav.page-header__site-nav
+					ul
+						li
+							a(href="blank.html")
+								|Студия
+						li
+							a(href="blank.html")
+								|Клиенты
+						li
+							a(href="catalog.html")
+								|Магазин
+						li
+							a(href="blank.html")
+								|Контакты
+				ul.user-nav
+					li
+						a(href="blank.html") Корзина
 		block content
+		block page-footer
+			|Тут будет подвал
 		block scripts
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
