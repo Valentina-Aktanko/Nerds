@@ -1,0 +1,6 @@
+mixin navItem(url, name, isCurrent)
+	li.site-nav__item(class={"site-nav__item--active": isCurrent})
+		if isCurrent
+			a= name
+		else
+			a(href=url)= name

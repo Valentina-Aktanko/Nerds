@@ -8,6 +8,26 @@ block vars
 		var description = typeof description !== 'undefined' ? description : null
 		var image = typeof image !== 'undefined' ? image : null
 	-
+		var currentPage = null
+		var siteNav = [
+			{
+				url: "blank.html",
+				name: "Студия"
+			},
+			{
+				url: "blank.html",
+				name: "Клиенты"
+			},
+			{
+				url: "catalog.html",
+				name: "Магазин"
+			},
+			{
+				url: "blank.html",
+				name: "Контакты"
+			}
+		]
+	-
 		var html = {
 			attrs: {
 				lang: 'ru'
@@ -112,8 +132,6 @@ block vars
 				color: null
 			}
 		}
-	-
-		var currentPage = null
 
 doctype html
 html(class=html.classList)&attributes(html.attrs)
@@ -285,20 +303,11 @@ html(class=html.classList)&attributes(html.attrs)
 		block page-header
 			header.page-header
 				+logo(currentPage)
+
 				nav.site-nav.page-header__site-nav
-					ul
-						li
-							a(href="blank.html")
-								|Студия
-						li
-							a(href="blank.html")
-								|Клиенты
-						li
-							a(href="catalog.html")
-								|Магазин
-						li
-							a(href="blank.html")
-								|Контакты
+					ul.site-nav__list
+						each item in siteNav
+							+navItem(item.url, item.name, item.url === currentPage)
 				ul.user-nav
 					li
 						a(href="blank.html") Корзина
