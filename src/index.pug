@@ -1,19 +1,16 @@
 extends pug/base
 
 prepend vars
-	- title = "Nerds - дизайн-студия из Краснодара"
-	- description = "Учебный проект Nerds для тренировки навыков верстки"
+	- title = "Nerds - дизайн-студия из Краснодара";
+	- description = "Учебный проект Nerds для тренировки навыков верстки";
 
 append vars
-	- html.classList.push("page-index")
+	- html.classList.push("page-index");
+	- currentPage = "index.html";
 
 block content
-	include pug/header
-
 	main
 		h1.visually-hidden
 			| Nerds - дизайн-студия из Краснодара
 
 		| Основное содержимое
-
-	include pug/footer
