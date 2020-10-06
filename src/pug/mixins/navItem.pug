@@ -1,3 +1,5 @@
-mixin navItem(url, name, isCurrent)
-	li.site-nav__item(class={"site-nav__item--active": isCurrent})
+mixin navItem(url, name)
+	li(class!= attributes.class class!= url===currentPage ? attributes.class+"--active" : "")
 		+link(url, name)
+
+
