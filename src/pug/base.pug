@@ -8,7 +8,7 @@ block vars
 		var description = typeof description !== 'undefined' ? description : null
 		var image = typeof image !== 'undefined' ? image : null
 	-
-		var currentPage = null
+		var currentPage = typeof currentPage !== 'undefined' ? currentPage : null
 		var siteNav = [
 			{
 				url: "blank.html",
@@ -304,13 +304,12 @@ html(class=html.classList)&attributes(html.attrs)
 			header.page-header
 				.container
 					+logo.page-header__logo.logo
-
 					nav.site-nav.page-header__site-nav
 						ul.site-nav__list
 							each item in siteNav
-								+navItem.site-nav__item(item.url, item.name)
+								+navItem(item.url, item.name).site-nav__item
 					ul.user-nav
-						+navItem.user-nav__item("blank.html", "Корзина")
+						+navItem("blank.html", "Корзина").user-nav__item
 
 		block content
 		block page-footer
