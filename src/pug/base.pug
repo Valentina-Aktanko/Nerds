@@ -302,14 +302,15 @@ html(class=html.classList)&attributes(html.attrs)
 		block body-start
 		block page-header
 			header.page-header
-				+logo()(class="page-header__logo")
+				.container
+					+logo.page-header__logo.logo
 
-				nav.site-nav.page-header__site-nav
-					ul.site-nav__list
-						each item in siteNav
-							+navItem(item.url, item.name)(class="site-nav__item")
-				ul.user-nav
-					+navItem("blank.html", "Корзина")(class="user-nav__item")
+					nav.site-nav.page-header__site-nav
+						ul.site-nav__list
+							each item in siteNav
+								+navItem.site-nav__item(item.url, item.name)
+					ul.user-nav
+						+navItem.user-nav__item("blank.html", "Корзина")
 
 		block content
 		block page-footer
