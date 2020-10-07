@@ -1,7 +1,7 @@
-mixin logo(currentPage)
+mixin logo()
 	if (currentPage === "index.html")
-		a.logo(class!=attributes.class)
+		a()(class!=attributes.class)
 			img(src="images/nerds-logo.svg" width="140" height="49" alt="Логотип Nerds")
 	else
-		a.logo(class!=attributes.class href="index.html")
+		a(href="index.html")(class!=attributes.class)
 			img(src="images/nerds-logo.svg" width="140" height="49" alt="Логотип Nerds")
