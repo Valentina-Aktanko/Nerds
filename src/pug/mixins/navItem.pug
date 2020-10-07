@@ -1,5 +1,3 @@
 mixin navItem(url, name)
-	li(class!= attributes.class class!= url===currentPage ? attributes.class+"--active" : "")
+	li(class!= url===currentPage ? `${attributes.class} ${attributes.class}--active` : attributes.class)()
 		+link(url, name)
-
-
